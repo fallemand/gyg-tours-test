@@ -155,7 +155,6 @@
   .pagination .pagination__number {
     color: #fff;
     font-weight: 300;
-    float: left;
     font-size: 13px;
     padding: 8px 16px;
     text-decoration: none;
@@ -176,6 +175,7 @@
 .tours {
   text-align: center; }
   .tours .tours__list {
+    text-align: center;
     margin-top: 30px; }
   .tours .tours__list-actions {
     text-align: right;
@@ -195,19 +195,18 @@
       bottom: 0;
       margin-left: auto;
       margin-right: auto;
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
       z-index: 2; }
     .tours .tours__list-tours.tours__list-tours--loading:after {
       content: '';
       position: absolute;
       width: 100%;
-      height: 95%;
+      height: 97%;
       z-index: 1;
-      top: 20px;
+      top: 15px;
       left: 0;
       padding: 30px;
-      border: 2px solid #e6e6e6;
       box-sizing: border-box;
       background-color: rgba(255, 255, 255, 0.9); }
   .tours .tours__list-filter {
