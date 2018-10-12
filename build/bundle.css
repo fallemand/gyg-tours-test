@@ -20,7 +20,7 @@
     width: 40%;
     display: inline-block; }
   .filter .filter__value {
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 2px 2px 0;
     border: 1px solid #eee;
     padding: 8px 10px 7px;
     margin-left: -1px;
@@ -32,28 +32,33 @@
     width: 250px; }
     .filter .filter__field {
       margin: 5px 0;
-      border-radius: 4px 0 0 4px;
+      border-radius: 2px 0 0 2px;
       -webkit-appearance: none;
       width: 40%;
-      min-width: inherit; }
+      height: 44px;
+      min-width: inherit;
+      font-size: 16px; }
     .filter .filter__value {
       margin: 5px 0 5px -1px;
       border-radius: 0 4px 4px 0;
       padding: 7px 10px 8px;
       -webkit-appearance: none;
       width: 60%;
-      vertical-align: bottom; } }
+      height: 44px;
+      vertical-align: bottom;
+      font-size: 16px; } }
 
 .sort {
   width: 100%; }
   .sort .sort__field {
     width: 85%;
+    height: 44px;
     display: inline-block; }
   .sort .sort__order {
     border: 1px solid #eee;
     border-radius: 2px;
     color: #1A2B49;
-    height: 30px;
+    height: 44px;
     padding: 5px;
     cursor: pointer;
     vertical-align: bottom;
@@ -76,10 +81,28 @@
     .sort .sort__field {
       margin: 5px 0;
       border-radius: 4px 0 0 4px;
-      -webkit-appearance: none; }
+      -webkit-appearance: none;
+      font-size: 16px; }
     .sort .sort__order {
       margin: 5px 0 5px -1px;
       border-radius: 0 4px 4px 0; } }
+
+.rating {
+  padding: 5px 0; }
+  .rating .rating__stars {
+    display: inline-block;
+    margin-right: 10px; }
+  .rating .rating__star {
+    color: #e8e9ec;
+    margin-right: 4px; }
+    .rating .rating__star.rating__star--filled {
+      color: #ffc600; }
+  .rating .rating__info {
+    font-size: 14px;
+    color: #768092; }
+    .rating .rating__info small {
+      color: #768092;
+      font-size: 12px; }
 
 .tour-info {
   text-align: center;
@@ -87,18 +110,22 @@
   padding: 15px 10px;
   margin: 15px 0; }
   .tour-info .tour-info__logo {
-    max-width: 100px; }
+    max-width: 210px; }
   .tour-info .tour-info__title {
     font-size: 18px;
     color: #1A2B49;
     margin: 5px; }
   .tour-info .tour-info__rating {
-    font-size: 14px;
-    color: #768092;
     margin-right: 10px; }
-    .tour-info .tour-info__rating small {
-      color: #768092;
-      font-size: 12px; }
+  .tour-info .tour-info__price {
+    color: #1A2B49;
+    font-size: 26px;
+    margin: 15px 0 0 0; }
+  .tour-info .tour-info__price-label {
+    color: #768092;
+    font-size: 16px;
+    display: block;
+    font-weight: 300; }
 
 @media (min-width: 1024px) {
   .tour-info {
@@ -111,10 +138,10 @@
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.35); }
     .tour-info .tour-info__logo {
       display: inline-block;
-      width: 10%; }
+      width: 20%; }
     .tour-info .tour-info__content {
       display: inline-block;
-      width: 80%;
+      width: 70%;
       padding: 0 20px;
       vertical-align: top; }
     .tour-info .tour-info__title {
@@ -219,17 +246,13 @@
   display: table-row;
   width: 100%; }
 
-.header .header__container {
-  background: #fff;
+.header .header__background {
+  background: #1A2B49;
   position: relative;
   height: 55px;
   border-bottom: 1px solid #e8e9eC; }
 
 .header .header__logo {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  margin-left: -30px;
   width: 60px; }
 
 .container {
@@ -251,13 +274,14 @@
     font-weight: 300; }
 
 @media (min-width: 1024px) {
-  .header .header__container {
+  .header .header__background {
     height: 79px; }
+  .header .header__container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 16px 10px; }
   .header .header__logo {
-    left: 50%;
-    margin-left: -29px;
-    width: 58px;
-    top: 16px; }
+    width: 58px; }
   .container {
     max-width: 1000px;
     padding: 30px;

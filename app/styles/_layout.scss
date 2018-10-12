@@ -6,7 +6,7 @@
 }
 
 .header {
-  .header__container {
+  .header__background {
     background: $header-background-color;
     position: relative;
     height: 55px;
@@ -14,10 +14,6 @@
   }
 
   .header__logo {
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    margin-left: -30px;
     width: 60px;
   }
 }
@@ -29,7 +25,7 @@
 }
 
 .main__container {
-  max-width: 1040px;
+  max-width: $header-max-width;
   margin: 15px auto 30px;
 }
 
@@ -49,15 +45,18 @@
 @media ( min-width: $breakpoint-desktop ) {
   .header {
 
-    .header__container {
+    .header__background {
       height: 79px;
     }
 
+    .header__container {
+      max-width: $header-max-width;
+      margin: 0 auto;
+      padding: 16px 10px;
+    }
+
     .header__logo {
-      left: 50%;
-      margin-left: -29px;
       width: 58px;
-      top: 16px;
     }
   }
 

@@ -5,10 +5,12 @@
 
   .filter__field {
     margin: 5px 0;
-    border-radius: 4px 0 0 4px;
+    border-radius: 2px 0 0 2px;
     -webkit-appearance: none;
     width: 40%;
+    height: $filter-height;
     min-width: inherit;
+    font-size: $font-size-16;
   }
 
   .filter__value {
@@ -17,6 +19,8 @@
     padding: 7px 10px 8px;
     -webkit-appearance: none;
     width: 60%;
+    height: $filter-height;
     vertical-align: bottom;
+    font-size: $font-size-16;
   }
 }

@@ -5,6 +5,7 @@
 
   .sort__field {
     width: 85%;
+    height: $filter-height;
     display: inline-block;
   }
 
@@ -12,7 +13,7 @@
     border: 1px solid $border-color;
     border-radius: 2px;
     color: $font-color-primary;
-    height: 30px;
+    height: $filter-height;
     padding: 5px;
     cursor: pointer;
     vertical-align: bottom;

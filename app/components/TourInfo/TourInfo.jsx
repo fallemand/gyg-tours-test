@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import Rating from '../Rating';
 import './_tour-info.scss';
 
 const TourInfo = ({
@@ -10,11 +11,9 @@ const TourInfo = ({
     <img className="tour-info__logo" src={image} alt="Tour Logo" />
     <div className="tour-info__content">
       <h2 className="tour-info__title">{title}</h2>
-      <span className="tour-info__rating">
-        {rating}
-        <small> /5</small>
-      </span>
+      <Rating className="tour-info__rating" value={parseFloat(rating)} />
       <p className="tour-info__price">
+        <small className="tour-info__price-label">From</small>
         {currency}
         {price}
       </p>
