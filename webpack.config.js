@@ -72,5 +72,5 @@ module.exports = {
       new OptimizeCSSAssetsPlugin({}),
     ],
   },
-  mode: 'production',
+  mode: 'development',
 };

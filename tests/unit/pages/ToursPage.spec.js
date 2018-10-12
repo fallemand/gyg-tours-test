@@ -1,16 +1,23 @@
 import React from 'react';
 import ToursPage from '../../../app/pages/tours/ToursPage';
 
-jest.mock('../../../app/services/restaurants.service', () => ({ restaurantsList: () => Promise.resolve([]) }));
+jest.mock('../../../app/services/tours.service', () => ({ getTours: () => ({
+  tours: [],
+  total: 2,
+}) }));
 
-describe('RestaurantsPage', () => {
-  const restaurantsInfo = [{
-    id: 1,
+global.console = {
+  log: jest.fn(),
+};
+
+describe('ToursPage', () => {
+  const toursInfo = [{
     logoUri: '__LOGOURI__',
-    name: '__TITLE__',
+    title: '__TITLE__',
     rating: '__RATING__',
-    location: '__LOCATION__',
-    categories: ['__CAT1__', '__CAT2__'],
+    price: '__PRICE__',
+    currency: '__CURRENCY__',
+    isSpecialOffer: true,
     className: '__CLASSNAME__',
   }];
   const props = {
@@ -21,7 +28,7 @@ describe('RestaurantsPage', () => {
   it('render component', () => {
     const component = shallow(<ToursPage {...props} />);
     component.setState({
-      paginatedResults: restaurantsInfo,
+      tours: toursInfo,
     });
     expect(escapeSnapshot(component)).toMatchSnapshot();
   });
@@ -29,9 +36,9 @@ describe('RestaurantsPage', () => {
   it('click on restaurant should redirect to restaurant page', () => {
     const component = shallow(<ToursPage {...props} />);
     component.setState({
-      paginatedResults: restaurantsInfo,
+      tours: toursInfo,
     });
-    component.find('.restaurants__list-restaurants :first-child').simulate('click');
-    expect(props.history.push).toHaveBeenCalledWith('/restaurants/1');
+    component.find('.tours__list-tours :first-child').simulate('click');
+    expect(global.console.log).toHaveBeenCalledWith(`Clicked: ${toursInfo[0].title}`);
   });
 });

@@ -113,7 +113,6 @@ class ToursPage extends React.Component {
 
   render() {
     const { tours, sort, sortOrder, filter, value, total, page, loading } = this.state;
-    const { history } = this.props;
     const sortAndFilterFields = [
       { value: 'title', label: 'Title' },
       { value: 'price', label: 'Price' },
@@ -149,8 +148,8 @@ class ToursPage extends React.Component {
             {
               tours.map((tour, index) => (
                 <TourInfo
-                  key={tour.name}
-                  onClick={() => (history.push(`/tours/${tour.id}`))}
+                  key={tour.title}
+                  onClick={() => (console.log(`Clicked: ${tour.title}`))}
                   image={`https://picsum.photos/210/140/?image=2${index}`}
                   {...tour}
                 />

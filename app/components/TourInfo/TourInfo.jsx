@@ -30,7 +30,7 @@ TourInfo.propTypes = {
   price: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,
   isSpecialOffer: PropTypes.bool.isRequired,
-  rating: PropTypes.number.isRequired,
+  rating: PropTypes.string.isRequired,
 };
 
 TourInfo.defaultProps = {

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToursPage render component 1`] = `
+"<div className='tours'>
+  <div className='tours__list'>
+    <div className='tours__list-actions'>
+      <Sort name='sort' title='Sort' field='' order={false} className='tours__list-sort' onChange={[Function: bound onSortChange]} fields={{...}} />
+      <Filter className='tours__list-filter' field='' value='' onFilter={[Function: bound onFilterSubmit]} onChange={[Function: bound onFilterChange]} fields={{...}} />
+    </div>
+    <div className='tours__list-tours tours__list-tours--loading'>
+      <TourInfo onClick={[Function: onClick]} image='https://picsum.photos/210/140/?image=20' logoUri='__LOGOURI__' title='__TITLE__' rating='__RATING__' price='__PRICE__' currency='__CURRENCY__' isSpecialOffer={true} className='__CLASSNAME__' />
+    </div>
+    <Pagination active={1} total={2} show={5} onChange={[Function: bound onPageChange]} className={{...}} />
+  </div>
+</div>"
+`;

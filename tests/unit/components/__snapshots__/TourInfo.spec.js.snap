@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RestaurantInfo render component 1`] = `
+"<div onClick={{...}} className='__CLASSNAME__ tour-info'>
+  <img className='tour-info__logo' src='__LOGOURI__' alt='Tour Logo' />
+  <div className='tour-info__content'>
+    <h2 className='tour-info__title'>
+      __TITLE__
+    </h2>
+    <span className='tour-info__rating'>
+      __RATING__
+      <small>
+         /5
+      </small>
+    </span>
+    <p className='tour-info__price'>
+      __CURRENCY__
+      __PRICE__
+    </p>
+  </div>
+</div>"
+`;
