@@ -4,16 +4,6 @@
   padding: 15px 10px;
   margin: 15px 0;
 
-  &.tour-info--clickable {
-    background-color: $background-color-secondary;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    &:hover {
-      box-shadow: 0 0 3px $border-color-hover;
-      background-color: $background-color-hover;
-    }
-  }
-
   .tour-info__logo {
     max-width: 100px;
   }

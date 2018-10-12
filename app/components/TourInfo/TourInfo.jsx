@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import './_tour-info.scss';
 
 const TourInfo = ({
-  className, logo, title, rating, price, currency, isSpecialOffer, onClick,
+  className, image, title, rating, price, currency, isSpecialOffer, onClick,
 }) => (
-  <div onClick={onClick} className={classnames(className, 'tour-info', { 'tour-info--clickable': onClick })}>
-    <img className="tour-info__logo" src={logo} alt="Tour Logo" />
+  <div onClick={onClick} className={classnames(className, 'tour-info')}>
+    <img className="tour-info__logo" src={image} alt="Tour Logo" />
     <div className="tour-info__content">
       <h2 className="tour-info__title">{title}</h2>
       <span className="tour-info__rating">
@@ -25,7 +25,7 @@ const TourInfo = ({
 TourInfo.propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
-  logo: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   currency: PropTypes.string.isRequired,

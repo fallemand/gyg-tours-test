@@ -20,7 +20,7 @@ class ToursPage extends React.Component {
     this.setQueryParams = this.setQueryParams.bind(this);
     this.getParamsFromUrl = this.getParamsFromUrl.bind(this);
     this.loadData = this.loadData.bind(this);
-    this.pageSize = 7;
+    this.pageSize = 5;
     this.state = {
       tours: [],
       sortOrder: false,
@@ -147,10 +147,11 @@ class ToursPage extends React.Component {
           )}
           >
             {
-              tours.map(tour => (
+              tours.map((tour, index) => (
                 <TourInfo
-                  key={tour.price}
+                  key={tour.name}
                   onClick={() => (history.push(`/tours/${tour.id}`))}
+                  image={`https://picsum.photos/210/140/?image=2${index}`}
                   {...tour}
                 />
               ))
