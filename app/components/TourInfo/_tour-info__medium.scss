@@ -1,0 +1,25 @@
+.tour-info {
+  text-align: left;
+  padding: 15px 20px;
+
+  .tour-info__logo {
+    display: inline-block;
+    width: 10%;
+  }
+
+  .tour-info__content {
+    display: inline-block;
+    width: 80%;
+    padding: 0 20px;
+    vertical-align: top;
+  }
+
+  .tour-info__title {
+    margin: 0 20px 0 0;
+    display: inline-block;
+  }
+
+  .tour-info__rating {
+    margin-right: 0;
+  }
+}

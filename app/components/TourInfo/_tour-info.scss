@@ -1,0 +1,6 @@
+@import '../../styles/variables';
+@import './tour-info__small';
+
+@media ( min-width: $breakpoint-desktop ) {
+  @import './tour-info__medium';
+}
