@@ -2,7 +2,7 @@
 
 exports[`Pagination render component 1`] = `
 "<div className='__CLASSNAME__ pagination'>
-  <button type='button' className='pagination__number' onClick={[Function: onClick]}>
+  <button type='button' className='pagination__number' disabled={true} onClick={[Function: onClick]}>
     «
   </button>
   <button type='button' className='pagination__number pagination__number--active' onClick={[Function: onClick]}>
@@ -35,7 +35,7 @@ exports[`Pagination render component 1`] = `
   <button type='button' className='pagination__number' onClick={[Function: onClick]}>
     10
   </button>
-  <button type='button' className='pagination__number' onClick={[Function: onClick]}>
+  <button type='button' className='pagination__number' disabled={false} onClick={[Function: onClick]}>
     »
   </button>
 </div>"

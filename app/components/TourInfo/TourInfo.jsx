@@ -17,6 +17,11 @@ const TourInfo = ({
         {currency}
         {price}
       </p>
+      { isSpecialOffer && (
+        <div className="tour-info__special-offer">
+          <span className="tour-info__special-offer-message">Special Offer!</span>
+        </div>)
+      }
     </div>
   </div>
 );

@@ -5,7 +5,7 @@
          "price": "14",
          "currency": "$",
          "rating":"3",
-         "isSpecialOffer":false
+         "isSpecialOffer":true
       },
       {
          "title":"Skip the Line: Pergamon Museum Berlin Tickets",
@@ -82,7 +82,7 @@
          "price": "87",
          "currency": "$",
          "rating":"2.1",
-         "isSpecialOffer":false
+         "isSpecialOffer":true
       },
       {
          "title":"Berlin Hop-on Hop-off Bus Tour with Live Commentary",
@@ -96,7 +96,7 @@
          "price": "140",
          "currency": "$",
          "rating":"4.5",
-         "isSpecialOffer":false
+         "isSpecialOffer":true
       }
    ]
 }

@@ -15,8 +15,18 @@ const getTours = ({ filter, value, sort, sortOrder, page, pageSize }) => {
 
   if (sort) {
     tours.sort((a, b) => {
-      let result = a[sort].localeCompare(b[sort]);
-      if (sortOrder) {
+      let result;
+      try {
+        if (typeof b[sort] === 'boolean') {
+          result = b[sort] - a[sort];
+        } else {
+          result = parseFloat(a[sort]) - parseFloat(b[sort]);
+        }
+      } catch (e) {
+        result = a[sort].localeCompare(b[sort]);
+      }
+      // eslint-disable-next-line no-extra-boolean-cast
+      if (!!sortOrder) {
         result *= -1;
       }
       return result;

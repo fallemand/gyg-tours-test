@@ -34,4 +34,11 @@
     display: block;
     font-weight: $font-light;
   }
+
+  .tour-info__special-offer {
+    padding: 15px;
+    color: $button-color;
+    background-color: #ff421b;
+    margin: 20px -10px -20px;
+  }
 }

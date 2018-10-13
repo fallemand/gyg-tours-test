@@ -113,11 +113,14 @@ class ToursPage extends React.Component {
 
   render() {
     const { tours, sort, sortOrder, filter, value, total, page, loading } = this.state;
-    const sortAndFilterFields = [
+    const filterFields = [
       { value: 'title', label: 'Title' },
       { value: 'price', label: 'Price' },
       { value: 'rating', label: 'Rating' },
     ];
+    const sortFields = filterFields.concat(
+      [{ value: 'isSpecialOffer', label: 'Special Offer' }],
+    );
     return (
       <div className="tours">
         <div className="tours__list">
@@ -129,7 +132,7 @@ class ToursPage extends React.Component {
               order={sortOrder}
               className="tours__list-sort"
               onChange={this.onSortChange}
-              fields={sortAndFilterFields}
+              fields={sortFields}
             />
             <Filter
               className="tours__list-filter"
@@ -137,7 +140,7 @@ class ToursPage extends React.Component {
               value={value}
               onFilter={this.onFilterSubmit}
               onChange={this.onFilterChange}
-              fields={sortAndFilterFields}
+              fields={filterFields}
             />
           </div>
           <div className={classnames(

@@ -7,16 +7,19 @@ exports[`RestaurantInfo render component 1`] = `
     <h2 className='tour-info__title'>
       __TITLE__
     </h2>
-    <span className='tour-info__rating'>
-      __RATING__
-      <small>
-         /5
-      </small>
-    </span>
+    <Rating className='tour-info__rating' value={NaN} />
     <p className='tour-info__price'>
+      <small className='tour-info__price-label'>
+        From
+      </small>
       __CURRENCY__
       __PRICE__
     </p>
+    <div className='tour-info__special-offer'>
+      <span className='tour-info__special-offer-message'>
+        Special Offer!
+      </span>
+    </div>
   </div>
 </div>"
 `;

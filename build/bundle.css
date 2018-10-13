@@ -137,6 +137,11 @@
     font-size: 16px;
     display: block;
     font-weight: 300; }
+  .tour-info .tour-info__special-offer {
+    padding: 15px;
+    color: #fff;
+    background-color: #ff421b;
+    margin: 20px -10px -20px; }
 
 @media (min-width: 1024px) {
   .tour-info {
@@ -145,7 +150,8 @@
     margin: 15px 0;
     cursor: pointer;
     transition: box-shadow 0.4s ease;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    position: relative; }
     .tour-info:hover {
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.35); }
     .tour-info .tour-info__logo {
@@ -161,7 +167,56 @@
       margin: 0 20px 0 0;
       display: inline-block; }
     .tour-info .tour-info__rating {
-      margin-right: 0; } }
+      margin-right: 0; }
+    .tour-info .tour-info__special-offer {
+      position: absolute;
+      right: -5px;
+      top: -5px;
+      z-index: 1;
+      overflow: hidden;
+      width: 75px;
+      height: 75px;
+      text-align: right;
+      margin: 0;
+      padding: 0;
+      background-color: transparent; }
+      .tour-info .tour-info__special-offer .tour-info__special-offer-message {
+        font-size: 9px;
+        font-weight: bold;
+        color: #FFF;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 20px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 100px;
+        display: block;
+        background: #79A70A;
+        background: linear-gradient(#FF5534 0%, #D9482C 100%);
+        box-shadow: 0 3px 10px -5px black;
+        position: absolute;
+        top: 19px;
+        right: -21px; }
+        .tour-info .tour-info__special-offer .tour-info__special-offer-message:before {
+          content: "";
+          position: absolute;
+          left: 0px;
+          top: 100%;
+          z-index: -1;
+          border-left: 3px solid #D9482C;
+          border-right: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          border-top: 3px solid #D9482C; }
+        .tour-info .tour-info__special-offer .tour-info__special-offer-message:after {
+          content: "";
+          position: absolute;
+          right: 0px;
+          top: 100%;
+          z-index: -1;
+          border-left: 3px solid transparent;
+          border-right: 3px solid #D9482C;
+          border-bottom: 3px solid transparent;
+          border-top: 3px solid #D9482C; } }
 
 .pagination {
   display: inline-block; }
