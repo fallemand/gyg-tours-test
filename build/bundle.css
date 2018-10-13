@@ -334,11 +334,6 @@
 .header .header__logo {
   width: 50px; }
 
-.container {
-  margin: 50px auto;
-  padding: 20px 10px;
-  border-radius: 2px; }
-
 .main__container {
   max-width: 1040px;
   margin: 15px auto 30px;
@@ -363,11 +358,6 @@
     text-align: left; }
   .header .header__logo {
     width: 58px; }
-  .container {
-    max-width: 1000px;
-    padding: 30px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6);
-    border-radius: 4px; }
   .main__container {
     margin: 40px auto 50px;
     padding: 0; } }
