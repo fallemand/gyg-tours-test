@@ -16,14 +16,13 @@ const getTours = ({ filter, value, sort, sortOrder, page, pageSize }) => {
   if (sort) {
     tours.sort((a, b) => {
       let result;
-      try {
-        if (typeof b[sort] === 'boolean') {
-          result = b[sort] - a[sort];
-        } else {
-          result = parseFloat(a[sort]) - parseFloat(b[sort]);
+      if (typeof a[sort] === 'boolean') {
+        result = b[sort] - a[sort];
+      } else {
+        result = parseFloat(a[sort]) - parseFloat(b[sort]);
+        if (Number.isNaN(result)) {
+          result = a[sort].localeCompare(b[sort]);
         }
-      } catch (e) {
-        result = a[sort].localeCompare(b[sort]);
       }
       // eslint-disable-next-line no-extra-boolean-cast
       if (!!sortOrder) {
