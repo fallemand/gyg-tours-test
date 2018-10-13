@@ -6,6 +6,10 @@
   .filter__field {
     width: 40%;
     display: inline-block;
+    font-size: $font-size-16;
+    height: $filter-height;
+    font-weight: $font-light;
+    color: $font-color-primary;
   }
 
   .filter__value {
@@ -15,5 +19,9 @@
     margin-left: -1px;
     width: 60%;
     display: inline-block;
+    height: $filter-height;
+    font-size: $font-size-16;
+    font-weight: $font-light;
+    color: $font-color-primary;
   }
 }

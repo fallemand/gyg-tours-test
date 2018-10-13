@@ -18,14 +18,22 @@
   width: 100%; }
   .filter .filter__field {
     width: 40%;
-    display: inline-block; }
+    display: inline-block;
+    font-size: 16px;
+    height: 44px;
+    font-weight: 300;
+    color: #1A2B49; }
   .filter .filter__value {
     border-radius: 0 2px 2px 0;
     border: 1px solid #eee;
     padding: 8px 10px 7px;
     margin-left: -1px;
     width: 60%;
-    display: inline-block; }
+    display: inline-block;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #1A2B49; }
 
 @media (min-width: 1024px) {
   .filter {
@@ -35,25 +43,24 @@
       border-radius: 2px 0 0 2px;
       -webkit-appearance: none;
       width: 40%;
-      height: 44px;
-      min-width: inherit;
-      font-size: 16px; }
+      min-width: inherit; }
     .filter .filter__value {
       margin: 5px 0 5px -1px;
       border-radius: 0 4px 4px 0;
       padding: 7px 10px 8px;
       -webkit-appearance: none;
       width: 60%;
-      height: 44px;
-      vertical-align: bottom;
-      font-size: 16px; } }
+      vertical-align: bottom; } }
 
 .sort {
   width: 100%; }
   .sort .sort__field {
     width: 85%;
     height: 44px;
-    display: inline-block; }
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    color: #1A2B49; }
   .sort .sort__order {
     border: 1px solid #eee;
     border-radius: 2px;
@@ -64,7 +71,8 @@
     vertical-align: bottom;
     width: 15%;
     margin: 10px 0 10px -1px;
-    background-color: #fff; }
+    background-color: #fff;
+    font-size: 16px; }
     .sort .sort__order:hover {
       background-color: #f1f1f1; }
   .sort .sort__order-img {
@@ -107,10 +115,13 @@
 .tour-info {
   text-align: center;
   border-radius: 2px;
-  padding: 15px 10px;
-  margin: 15px 0; }
+  padding: 0;
+  margin: 10px 0 25px;
+  box-shadow: 0 0 10px #c1c1c1; }
   .tour-info .tour-info__logo {
-    max-width: 210px; }
+    width: 100%; }
+  .tour-info .tour-info__content {
+    padding: 10px 10px 20px; }
   .tour-info .tour-info__title {
     font-size: 18px;
     color: #1A2B49;
@@ -131,6 +142,7 @@
   .tour-info {
     text-align: left;
     padding: 15px 20px;
+    margin: 15px 0;
     cursor: pointer;
     transition: box-shadow 0.4s ease;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
@@ -138,6 +150,7 @@
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.35); }
     .tour-info .tour-info__logo {
       display: inline-block;
+      max-width: 210px;
       width: 20%; }
     .tour-info .tour-info__content {
       display: inline-block;
@@ -175,14 +188,14 @@
 .tours {
   text-align: center; }
   .tours .tours__list {
-    text-align: center;
-    margin-top: 30px; }
+    text-align: center; }
   .tours .tours__list-actions {
     text-align: right;
-    margin-right: 5px; }
+    background-color: #52637d;
+    margin: -15px -15px 0;
+    padding: 15px; }
   .tours .tours__list-tours {
-    margin: 0;
-    padding: 5px;
+    margin-top: 20px;
     position: relative;
     min-height: 200px; }
     .tours .tours__list-tours.tours__list-tours--loading:before {
@@ -202,9 +215,9 @@
       content: '';
       position: absolute;
       width: 100%;
-      height: 97%;
+      height: 100%;
       z-index: 1;
-      top: 15px;
+      top: 0;
       left: 0;
       padding: 30px;
       box-sizing: border-box;
@@ -214,7 +227,17 @@
 
 @media (min-width: 1024px) {
   .tours {
-    text-align: left; } }
+    text-align: left; }
+    .tours .tours__list {
+      margin-top: 30px; }
+    .tours .tours__list-actions {
+      background-color: transparent;
+      margin: 0 5px 0 0;
+      padding: 0; }
+    .tours .tours__list-tours {
+      padding: 5px;
+      min-height: 200px;
+      margin-top: 0; } }
 
 .not-found {
   text-align: center;
@@ -247,12 +270,14 @@
 
 .header .header__background {
   background: #1A2B49;
-  position: relative;
-  height: 55px;
-  border-bottom: 1px solid #e8e9eC; }
+  height: 60px; }
+
+.header .header__container {
+  padding: 8px;
+  text-align: center; }
 
 .header .header__logo {
-  width: 60px; }
+  width: 50px; }
 
 .container {
   margin: 50px auto;
@@ -261,7 +286,8 @@
 
 .main__container {
   max-width: 1040px;
-  margin: 15px auto 30px; }
+  margin: 15px auto 30px;
+  padding: 0 15px 10px; }
 
 .footer {
   text-align: center;
@@ -278,7 +304,8 @@
   .header .header__container {
     max-width: 1040px;
     margin: 0 auto;
-    padding: 16px 10px; }
+    padding: 16px 10px;
+    text-align: left; }
   .header .header__logo {
     width: 58px; }
   .container {
@@ -287,7 +314,8 @@
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6);
     border-radius: 4px; }
   .main__container {
-    margin: 40px auto 50px; } }
+    margin: 40px auto 50px;
+    padding: 0; } }
 
 * {
   box-sizing: border-box; }

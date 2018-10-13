@@ -8,13 +8,16 @@
 .header {
   .header__background {
     background: $header-background-color;
-    position: relative;
-    height: 55px;
-    border-bottom: $header-border-bottom;
+    height: 60px;
+  }
+
+  .header__container {
+    padding: 8px;
+    text-align: center;
   }
 
   .header__logo {
-    width: 60px;
+    width: 50px;
   }
 }
 
@@ -27,6 +30,7 @@
 .main__container {
   max-width: $header-max-width;
   margin: 15px auto 30px;
+  padding: 0 15px 10px;
 }
 
 .footer {
@@ -53,6 +57,7 @@
       max-width: $header-max-width;
       margin: 0 auto;
       padding: 16px 10px;
+      text-align: left;
     }
 
     .header__logo {
@@ -69,5 +74,6 @@
 
   .main__container {
     margin: 40px auto 50px;
+    padding: 0;
   }
 }

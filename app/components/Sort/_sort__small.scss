@@ -7,6 +7,9 @@
     width: 85%;
     height: $filter-height;
     display: inline-block;
+    font-size: $font-size-16;
+    font-weight: $font-light;
+    color: $font-color-primary;
   }
 
   .sort__order {
@@ -20,6 +23,7 @@
     width: 15%;
     margin: 10px 0 10px -1px;
     background-color: #fff;
+    font-size: $font-size-16;
 
     &:hover {
       background-color: $background-color-hover;
