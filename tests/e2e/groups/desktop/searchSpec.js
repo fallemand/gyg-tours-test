@@ -1,5 +1,5 @@
 module.exports = {
-  'Should filter with game name': (client) => {
+  'Should filter with tour name': (client) => {
     const searchPage = client.page.SearchPage();
     searchPage
       .filter('Skip the Line: Berlin TV Tower Ticket', client)
@@ -9,7 +9,7 @@ module.exports = {
       searchPage.expect.element('@toursFirstChildTitle').text.to.equal('Skip the Line: Berlin TV Tower Ticket');
     });
   },
-  'Should sort games RATING': (client) => {
+  'Should sort tours RATING': (client) => {
     const searchPage = client.page.SearchPage();
     searchPage
       .sortByRating()
