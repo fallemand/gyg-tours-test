@@ -24,6 +24,7 @@ describe('Filter', () => {
   });
 
   it('handleSubmit call onChange', () => {
+    // test!
     const component = shallow(<Filter {...props} />);
     const instance = component.instance();
     const event = {
