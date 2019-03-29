@@ -3,7 +3,7 @@ import Filter from '../../../app/components/Filter';
 
 describe('Filter', () => {
   const props = {
-    onFilter: () => {},
+    onFilter: jest.fn(),
     onChange: () => {},
     field: '__VAL1__',
     fields: [
@@ -21,5 +21,16 @@ describe('Filter', () => {
   it('render with className', () => {
     const component = shallow(<Filter className="__CLASSNAME__" {...props} />);
     expect(escapeSnapshot(component)).toMatchSnapshot();
+  });
+
+  it('handleSubmit call onChange', () => {
+    const component = shallow(<Filter {...props} />);
+    const instance = component.instance();
+    const event = {
+      preventDefault: jest.fn(),
+    };
+    instance.handleSubmit(event);
+    expect(event.preventDefault).toHaveBeenCalled();
+    expect(props.onFilter).toHaveBeenCalled();
   });
 });
