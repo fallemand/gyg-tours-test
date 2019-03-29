@@ -1,5 +1,7 @@
 # GetYourGuide Tours
 
+[![codecov](https://codecov.io/gh/fallemand/gyg-tours-test/branch/master/graph/badge.svg)](https://codecov.io/gh/fallemand/gyg-tours-test)
+
 > GetYourGuide Practise Test  
 > Search between different tours!
 
