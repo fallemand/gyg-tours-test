@@ -25,6 +25,7 @@
 - Easy to split functionality in atomic components.
 - Easy to reuse components between multiple projects.
 - Fast to code.
+- Great community support.
 - Easy to handle interactions.
 - Easy to test.
 
