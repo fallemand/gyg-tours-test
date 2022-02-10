@@ -61,7 +61,7 @@
     "jest": "^23.6.0",
     "mini-css-extract-plugin": "^0.4.3",
     "nightwatch": "^0.9.21",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.18.4",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
